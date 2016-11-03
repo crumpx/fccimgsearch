@@ -1,0 +1,49 @@
+html{
+	margin: 0;
+	padding: 0;
+	background-color: #ccc;
+	font-family: monospace;
+}
+
+a {
+	text-decoration: none;
+	color: orangered;
+}
+
+.container {
+	text-align: center;
+	margin-left: 40px
+}
+.header {
+	/*background-color: pink;*/
+	width: 600px;
+}
+
+.header img {
+	max-width: 220px;
+	border-radius: 5px;
+	border: 3px #666 solid;
+}
+
+.instructions {
+	width: 700px;
+	text-align: left;
+}
+
+blockquote {
+	/*border-left: 4px solid grey;*/
+	padding: 15px 10px;
+	background-color: #bbb;
+	border-radius: 15px;
+}
+
+
+.explain p {
+	color: orangered;
+}
+
+.history {
+	width: 700px;
+	text-align: left;
+	color: #666;
+}

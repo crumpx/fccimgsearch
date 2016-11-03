@@ -1,0 +1,64 @@
+doctype html
+html
+	head
+		link(href='/css/main.css', rel='stylesheet')
+		link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet')
+		title Url Shorten Service
+	body
+		.container
+			.header
+				img(src='https://avatars.githubusercontent.com/u/4764314?v=3')
+				.icons
+					a(href='https://www.facebook.com/crumpx')
+						span.fa-stack.fa-lg
+							i.fa.fa-square-o.fa-stack-2x
+							i.fa.fa-facebook.fa-stack-1x
+
+					a(href='https://www.twitter.com/crumpz')
+						span.fa-stack.fa-lg
+							i.fa.fa-square-o.fa-stack-2x
+							i.fa.fa-twitter.fa-stack-1x
+
+					a(href='https://github.com/crumpx')
+						span.fa-stack.fa-lg
+							i.fa.fa-square-o.fa-stack-2x
+							i.fa.fa-github.fa-stack-1x		
+
+					a(href='https://www.linkedin.com/in/gang-zhao-198201')
+						span.fa-stack.fa-lg
+							i.fa.fa-square-o.fa-stack-2x
+							i.fa.fa-linkedin.fa-stack-1x			
+				p Created by Gang Zhao	
+
+				h1 FCC URL Image Search Abstraction Layer with Flickr api
+			.instructions
+				blockquote
+					h2 User stories:
+					ol
+						li I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+						br
+						li I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+						br
+						li I can get a list of the most recently submitted search strings.
+				.explain
+					h2 Example usage:
+					h3 To preform a search:
+					p #{host}/api/imagesearch/lolcats%20funny?offset=2
+					p where 'lolcats%20funny' is the search criteria, and '?offset=2' is how many result you are willing to receive at once.
+	
+					h3 Output
+					p. 
+						[{
+						url: "https://farm6.staticflickr.com/5492/30128325404_08b157109c.jpg",
+						snippet: "cutie pie little kitten poking via http://ift.tt/29KELz0",
+						thumbnail: "https://farm6.staticflickr.com/5492/30128325404_08b157109c_t.jpg",
+						context: "https://www.flickr.com/photos/143919671@N07/30128325404"
+						},{
+						url: "https://farm6.staticflickr.com/5653/30723726266_8096086fb9.jpg",
+						snippet: "Picking her up tomorrow! What should I name her? via http://ift.tt/29KELz0",
+						thumbnail: "https://farm6.staticflickr.com/5653/30723726266_8096086fb9_t.jpg",
+						context: "https://www.flickr.com/photos/143919671@N07/30723726266"
+						}]
+					
+					h2 To check search keyword history
+					a(href="#{host}/api/latest/imagesearch") #{host}/api/latest/imagesearch
