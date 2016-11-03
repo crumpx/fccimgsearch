@@ -12,7 +12,8 @@ a {
 
 .container {
 	text-align: center;
-	margin-left: 40px
+	margin-left: 40px;
+	margin-top: 40px;
 }
 .header {
 	/*background-color: pink;*/
