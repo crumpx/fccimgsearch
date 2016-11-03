@@ -1,6 +1,6 @@
 #FCC URL Image Search Abstraction Layer with Flickr api
 
-#DEPOLYMENT:
+##DEPLOYMENT:
 
 ###setup app
 `heroku create`
