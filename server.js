@@ -47,7 +47,7 @@ request({
 	qs: {
 		api_key: 'c99dd9a0234ca15d49fb2624b2cc784a',
 		method: "flickr.photos.search",
-		text: 'funny cats',
+		text: searchTerm,
 		format: 'json',
 		nojsoncallback:1,
 		per_page:query
