@@ -45,7 +45,7 @@ request({
 	method: 'GET',
 	uri: API,
 	qs: {
-		api_key: 'c99dd9a0234ca15d49fb2624b2cc784a',
+		api_key: process.env.APIKEY,
 		method: "flickr.photos.search",
 		text: searchTerm,
 		format: 'json',
