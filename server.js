@@ -5,7 +5,7 @@ var app = express();
 var request = require('request');
 var ObjectID = mongodb.ObjectID;
 var API = "https://api.flickr.com/services/rest/"
-var result = [];
+
 
 app.set('view engine', 'jade');
 app.set('views', path.join(__dirname, 'public'));
@@ -39,6 +39,7 @@ app.get('/api/imagesearch/:param', function(req, res){
 var query = req.query.offset; 
 var searchTerm = req.params.param;
 var collection = db.collection('search');
+var result = [];
 
 request({
 	method: 'GET',
