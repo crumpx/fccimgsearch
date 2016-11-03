@@ -41,3 +41,7 @@ blockquote {
 .explain p {
 	color: orangered;
 }
+
+.explain p:last-child {
+	color: black;
+}
