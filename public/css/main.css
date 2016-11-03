@@ -31,17 +31,16 @@ a {
 }
 
 blockquote {
-	/*border-left: 4px solid grey;*/
+
 	padding: 15px 10px;
 	background-color: #bbb;
 	border-radius: 15px;
 }
 
-
 .explain p {
 	color: orangered;
 }
 
-.explain p:last-child {
+.explain p:nth-child(4) {
 	color: black;
 }
