@@ -73,7 +73,7 @@ request({
 
 app.get('/api/latest/imagesearch', function(req, res){
 	var collection = db.collection('search');
-	collection.find({}, {id: 0}).toArray(function(err, documents){
+	collection.find({}, {_id: 0}).toArray(function(err, documents){
 		if (err) console.log(err);
 		res.send(JSON.stringify(documents));
 	})
