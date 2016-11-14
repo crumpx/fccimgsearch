@@ -36,7 +36,7 @@ app.get('/', function(req, res){
 
 app.get('/api/imagesearch/:param', function(req, res){
 
-var query = req.query.offset; 
+var query = req.query.offset;
 var searchTerm = req.params.param;
 var collection = db.collection('search');
 var result = [];
@@ -67,18 +67,14 @@ request({
 		if (err) throw err;
 		res.send(JSON.stringify(result));
 	});
-});	
+});
 });
 
 
 app.get('/api/latest/imagesearch', function(req, res){
 	var collection = db.collection('search');
-	collection.find({}).toArray(function(err, documents){
+	collection.find({}, {_id: 0}).toArray(function(err, documents){
 		if (err) console.log(err);
-		documents = documents.map(function(item){
-			delete item._id;
-			return item;
-		})
 		res.send(JSON.stringify(documents));
 	})
 });
